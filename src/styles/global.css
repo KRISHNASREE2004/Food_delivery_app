@@ -1,0 +1,386 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+  color: #333;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* ================= HERO SECTION ================= */
+.hero-section {
+  min-height: 80vh;
+  background: linear-gradient(135deg, #ff6b00 0%, #ff8c00 50%, #ffa500 100%);
+  position: relative;
+  overflow: hidden;
+  animation: fadeUp 1s ease;
+}
+
+/* DARK OVERLAY */
+.hero-overlay {
+  min-height: 80vh;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 40px 60px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ================= TOP BAR ================= */
+.hero-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.hero-logo {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* NAV BUTTONS */
+.hero-actions {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.nav-btn {
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.nav-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.logout-btn {
+  padding: 10px 20px;
+  background: #e74c3c;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+}
+
+/* ================= HERO CONTENT ================= */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  max-width: 600px;
+}
+
+.hero-main-text {
+  font-size: 56px;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-sub-text {
+  font-size: 28px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.hero-desc {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 10px 0;
+}
+
+.hero-cta-btn {
+  padding: 16px 40px;
+  background: white;
+  color: #ff6b00;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  max-width: 300px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hero-cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  background: #f5f5f5;
+}
+
+/* ================= RESTAURANT SECTION ================= */
+.restaurants-container {
+  padding: 40px 50px;
+  background: transparent; /* ❌ no white background */
+  color: white;
+}
+
+/* SECTION TITLE */
+.section-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* SEARCH BAR */
+.filter-bar {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.filter-bar input,
+.filter-bar select {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+/* ================= RESTAURANT GRID ================= */
+.restaurant-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* ✅ 3 columns */
+  gap: 25px;
+}
+
+/* GLASS CARD */
+.restaurant-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0.05)
+  );
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 20px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.restaurant-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(255, 77, 77, 0.4);
+}
+
+/* ================= MENU + CART ================= */
+.menu-cart-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .restaurant-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menu-cart-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .restaurant-list {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content {
+    margin-top: 80px;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+}
+/* ================= HERO TEXT ================= */
+
+.hero-content {
+  margin-top: 120px;
+  max-width: 700px;
+  animation: slideFade 1.4s ease;
+}
+
+.hero-main-text {
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  animation: popIn 1.2s ease;
+}
+
+.hero-sub-text {
+  font-size: 38px;
+  font-weight: 600;
+  color: #ff4d4d;
+  margin-bottom: 12px;
+  animation: glowText 2s infinite alternate;
+}
+
+.hero-desc {
+  font-size: 20px;
+  opacity: 0.9;
+  margin-bottom: 25px;
+}
+
+/* CTA BUTTON */
+.hero-cta-btn {
+  padding: 16px 38px;
+  font-size: 18px;
+  border-radius: 40px;
+  border: none;
+  background: linear-gradient(135deg, #ff4d4d, #ff784d);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 15px 40px rgba(255, 77, 77, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-cta-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 20px 50px rgba(255, 77, 77, 0.8);
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes slideFade {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes glowText {
+  from {
+    text-shadow: 0 0 5px #ff4d4d;
+  }
+  to {
+    text-shadow: 0 0 20px #ff4d4d, 0 0 30px #ff4d4d;
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .hero-main-text {
+    font-size: 44px;
+  }
+
+  .hero-sub-text {
+    font-size: 28px;
+  }
+
+  .hero-desc {
+    font-size: 16px;
+  }
+}
+
+/* PAGE CONTENT STYLES */
+.page-content {
+  padding: 40px 20px;
+  min-height: 70vh;
+  background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ff6b00;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
