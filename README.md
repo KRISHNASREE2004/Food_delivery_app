@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# 🍽️Food Delivery App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern and interactive Food Delivery Web Application built using React.js and Firebase.
 
-## Available Scripts
+The application allows users to register/login, explore restaurants, view menus, add items to cart, and place orders with a clean UI and smooth animations.
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+## 🔐 Authentication
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+•	User Registration & Login (Firebase Authentication)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+•	Secure session handling
 
-### `npm test`
+•	Logout functionality
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🏠 Home Page
 
-### `npm run build`
+•	Attractive hero section with background image
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+•	Animated heading and CTA button
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+•	Smooth scroll to restaurant section
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🍴 Restaurants
 
-### `npm run eject`
+•	12+ restaurants displayed in glassmorphism UI
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+•	Search restaurants by name or cuisine
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+•	Filter restaurants by cuisine type
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+•	Restaurant details: rating, delivery time, minimum order
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📋 Menu
 
-## Learn More
+•	Separate menu for each restaurant
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+•	Menu cards with item name, category, and price
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+•	Add items to cart
 
-### Code Splitting
+## 🛒 Cart & Orders
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+•	View cart items
 
-### Analyzing the Bundle Size
+•	Calculate total price automatically
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+•	Place order
 
-### Making a Progressive Web App
+•	Orders stored in Firebase Firestore
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+•	View order history
 
-### Advanced Configuration
+•	Delete orders if not needed
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🔙 Navigation
 
-### Deployment
+•	Back to home page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+•	Back to restaurants
 
-### `npm run build` fails to minify
+•	Smooth user navigation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🧑‍💻 Tech Stack
+
+Frontend
+
+•	React.js
+
+•	JavaScript (ES6)
+
+•	HTML5
+
+•	CSS3 (Glassmorphism, Animations)
+
+## Backend / Database
+
+•	Firebase Authentication
+
+•	Firebase Firestore (Database)
+
+## Tools & Platform
+
+•	Git & GitHub
+
+•	VS Code
+
+•	Node.js & npm
+
